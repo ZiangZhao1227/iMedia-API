@@ -64,10 +64,11 @@ export const loginUser = async (req: Request, res: Response) => {
       `${process.env.JWT_SEC_KEY}`,
       { expiresIn: "3d" }
     );
+    const { password, ...userInfo } = user._doc;
     res.status(200).json({
       success: true,
       message: "login successed",
-      userInfo: user,
+      userInfo: userInfo,
       accessToken: accessToken,
     });
   } catch (error) {
