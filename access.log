@@ -1,2 +1,14 @@
 [2022-04-04 12:26:42] "GET /" 304 - - 4.332 ms
 [2022-04-04 12:31:06] "GET /" 304 - - 3.565 ms
+[2022-04-04 13:25:42] "GET /api/users" 200 18 - 2.677 ms
+[2022-04-04 13:27:28] "GET /api/auth" 200 18 - 3.024 ms
+[2022-04-04 13:45:50] "GET /api/auth/register" 404 41 - 3.047 ms
+[2022-04-04 13:46:56] "GET /api/auth/register" 200 60 - 23.403 ms
+[2022-04-04 13:51:31] "POST /api/auth/register" 200 60 - 19.864 ms
+[2022-04-04 13:52:11] "POST /api/auth/register" 401 145 - 4.813 ms
+[2022-04-04 13:59:00] "POST /api/auth/register" 200 393 - 110.736 ms
+[2022-04-04 14:07:22] "GET /api/auth/login" 404 41 - 3.070 ms
+[2022-04-04 14:07:37] "POST /api/auth/login" 404 44 - 24.503 ms
+[2022-04-04 14:09:58] "POST /api/auth/login" 404 46 - 101.398 ms
+[2022-04-04 14:11:36] "POST /api/auth/login" 200 377 - 104.767 ms
+[2022-04-04 14:23:18] "POST /api/auth/register" 400 53 - 3.070 ms

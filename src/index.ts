@@ -5,6 +5,8 @@ import helmet from "helmet";
 
 import loggerHandler from "./middlewares/logger";
 import errorHandler from "./middlewares/error";
+import userRouter from "./routes/users";
+import authRouter from "./routes/auth";
 
 dotenv.config();
 
@@ -29,9 +31,8 @@ app.use(express.json());
 app.use(helmet());
 app.use(loggerHandler);
 
-app.get("/", (req, res) => {
-  res.send("Hello World");
-});
+app.use("/api/users", userRouter);
+app.use("/api/auth", authRouter);
 
 app.use(errorHandler.unknownEndpoint);
 app.use(errorHandler.generalError);
