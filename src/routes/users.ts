@@ -1,9 +1,10 @@
 import express from "express";
 
+import { updateUser } from "../controllers/users";
+import tokenHandler from "../middlewares/jwtToken";
+
 const router = express.Router();
 
-router.get("/", (req, res) => {
-  res.send("This is user route");
-});
+router.put("/:id", tokenHandler, updateUser);
 
 export default router;

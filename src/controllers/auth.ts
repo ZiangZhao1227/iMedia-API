@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
 
 import User from "../models/User";
 
@@ -55,10 +56,19 @@ export const loginUser = async (req: Request, res: Response) => {
         .status(404)
         .json({ success: false, message: "invalid password" });
     }
+    const accessToken = jwt.sign(
+      {
+        id: user._id,
+        isAdmin: user.isAdmin,
+      },
+      `${process.env.JWT_SEC_KEY}`,
+      { expiresIn: "3d" }
+    );
     res.status(200).json({
       success: true,
       message: "login successed",
       userInfo: user,
+      accessToken: accessToken,
     });
   } catch (error) {
     res.status(500).json({ success: false, message: error });

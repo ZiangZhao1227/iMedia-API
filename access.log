@@ -12,3 +12,14 @@
 [2022-04-04 14:09:58] "POST /api/auth/login" 404 46 - 101.398 ms
 [2022-04-04 14:11:36] "POST /api/auth/login" 200 377 - 104.767 ms
 [2022-04-04 14:23:18] "POST /api/auth/register" 400 53 - 3.070 ms
+[2022-04-04 15:03:15] "POST /api/auth/register" 400 59 - 27.263 ms
+[2022-04-04 15:03:21] "POST /api/auth/register" 400 59 - 5.050 ms
+[2022-04-04 15:03:25] "POST /api/auth/register" 200 395 - 92.842 ms
+[2022-04-04 15:31:31] "PUT /api/users/624acf7410e4dc32681fdfc5" 403 62 - 3.223 ms
+[2022-04-04 15:31:55] "PUT /api/users/624acf7410e4dc32681fdfc5" 200 390 - 23.958 ms
+[2022-04-04 15:32:54] "POST /api/auth/register" 200 395 - 109.223 ms
+[2022-04-04 15:33:51] "PUT /api/users/624ae576e6ed852e1841b94f" 200 392 - 3.571 ms
+[2022-04-04 15:34:27] "PUT /api/users/624ae576e6ed852e1841b94f" 200 416 - 89.507 ms
+[2022-04-04 15:56:56] "POST /api/auth/login" 404 44 - 13.884 ms
+[2022-04-04 15:57:05] "POST /api/auth/login" 404 44 - 3.112 ms
+[2022-04-04 15:57:40] "POST /api/auth/login" 200 612 - 101.118 ms
