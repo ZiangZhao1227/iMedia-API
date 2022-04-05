@@ -40,5 +40,5 @@ app.use(errorHandler.unknownEndpoint);
 app.use(errorHandler.generalError);
 
 app.listen(port, () => {
-  console.log(`Backend server is running on port ${process.env.PORT}!`);
+  console.log(`Backend server is running on port ${port}!`);
 });
