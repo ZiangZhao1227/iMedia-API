@@ -23,6 +23,26 @@ A social media REST API with jwt login, register, and all CRUD operations
 > BASE URL
 > https://imedia-app.herokuapp.com/
 
+## URL Lists
+#### User
+* GET https://imedia-app.herokuapp.com/api/users/:id
+* PUT https://imedia-app.herokuapp.com/api/users/:id
+* DELETE https://imedia-app.herokuapp.com/api/users/:id
+* PUT https://imedia-app.herokuapp.com/api/users/:id/follow
+* PUT https://imedia-app.herokuapp.com/api/users/:id/unfollow
+
+#### POST
+* GET https://imedia-app.herokuapp.com/api/posts/:id
+* GET https://imedia-app.herokuapp.com/api/posts/timeline/all
+* PUT https://imedia-app.herokuapp.com/api/posts/:id/like
+* PUT https://imedia-app.herokuapp.com/api/posts/:id
+* DELETE https://imedia-app.herokuapp.com/api/posts/:id
+* POST https://imedia-app.herokuapp.com/api/posts
+
+#### Authentication
+* POST https://imedia-app.herokuapp.com/api/auth/login
+* POST https://imedia-app.herokuapp.com/api/auth/register
+
 ## Installing
 
 Execute the command from the project directory
