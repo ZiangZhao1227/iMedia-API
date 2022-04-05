@@ -7,6 +7,7 @@ import loggerHandler from "./middlewares/logger";
 import errorHandler from "./middlewares/error";
 import userRouter from "./routes/users";
 import authRouter from "./routes/auth";
+import postRouter from "./routes/posts";
 
 dotenv.config();
 
@@ -33,6 +34,7 @@ app.use(loggerHandler);
 
 app.use("/api/users", userRouter);
 app.use("/api/auth", authRouter);
+app.use("/api/posts", postRouter);
 
 app.use(errorHandler.unknownEndpoint);
 app.use(errorHandler.generalError);

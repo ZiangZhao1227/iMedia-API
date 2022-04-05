@@ -35,7 +35,7 @@ export const registerUser = async (req: Request, res: Response) => {
       userInfo: newUserDetail,
     });
   } catch (error) {
-    res.status(500).json({ success: false, message: error });
+    return res.status(500).json({ success: false, message: error });
   }
 };
 
@@ -72,6 +72,6 @@ export const loginUser = async (req: Request, res: Response) => {
       accessToken: accessToken,
     });
   } catch (error) {
-    res.status(500).json({ success: false, message: error });
+    return res.status(500).json({ success: false, message: error });
   }
 };
