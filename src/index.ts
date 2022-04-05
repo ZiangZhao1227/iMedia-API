@@ -10,11 +10,11 @@ import authRouter from "./routes/auth";
 import postRouter from "./routes/posts";
 
 dotenv.config();
-
 const app = express();
+const port = process.env.PORT || 8080;
 
 mongoose
-  .connect(`${process.env.MONGODB_URI_LOCAL}`, {
+  .connect(`${process.env.MONGODB_URI}`, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false,
@@ -39,6 +39,6 @@ app.use("/api/posts", postRouter);
 app.use(errorHandler.unknownEndpoint);
 app.use(errorHandler.generalError);
 
-app.listen(process.env.PORT || 8080, () => {
+app.listen(port, () => {
   console.log(`Backend server is running on port ${process.env.PORT}!`);
 });
