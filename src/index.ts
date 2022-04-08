@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
 import helmet from "helmet";
+import cors from "cors";
 
 import loggerHandler from "./middlewares/logger";
 import errorHandler from "./middlewares/error";
@@ -28,6 +29,7 @@ mongoose
     process.exit(1);
   });
 
+app.use(cors());
 app.use(express.json());
 app.use(helmet());
 app.use(loggerHandler);
