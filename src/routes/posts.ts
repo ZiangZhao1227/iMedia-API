@@ -22,6 +22,6 @@ router.put("/:id/like", tokenHandler, toggleLikePost);
 
 router.get("/:id", getPost);
 
-router.get("/timeline/all", tokenHandler, getTimeLinePost);
+router.get("/timeline/:userId", tokenHandler, getTimeLinePost);
 
 export default router;
