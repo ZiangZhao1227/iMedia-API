@@ -55,8 +55,12 @@ export const deleteUser = async (req: any, res: Response) => {
 };
 
 export const getUser = async (req: any, res: Response) => {
+  const userId = req.query.userId;
+  const username = req.query.username;
   try {
-    const user = await User.findById(req.params.id);
+    const user = userId
+      ? await User.findById(userId)
+      : await User.findOne({ username: username });
     const { password, ...userInfo } = user._doc;
     res.status(200).json({
       success: true,

@@ -103,3 +103,13 @@ export const getTimeLinePost = async (req: any, res: Response) => {
     return res.status(500).json({ success: false, message: error });
   }
 };
+
+export const getUserAllPosts = async (req: any, res: Response) => {
+  try {
+    const user = await User.findOne({ username: req.params.username });
+    const posts = await Post.find({ userId: user._id });
+    res.status(200).json(posts);
+  } catch (error) {
+    return res.status(500).json({ success: false, message: error });
+  }
+};

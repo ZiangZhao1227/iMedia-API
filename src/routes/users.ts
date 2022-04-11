@@ -15,7 +15,7 @@ router.put("/:id", tokenHandler, updateUser);
 
 router.delete("/:id", tokenHandler, deleteUser);
 
-router.get("/:id", getUser);
+router.get("/", getUser);
 
 router.put("/:id/follow", tokenHandler, followUser);
 

@@ -7,6 +7,7 @@ import {
   toggleLikePost,
   getPost,
   getTimeLinePost,
+  getUserAllPosts,
 } from "../controllers/post";
 import tokenHandler from "../middlewares/jwtToken";
 
@@ -23,5 +24,7 @@ router.put("/:id/like", tokenHandler, toggleLikePost);
 router.get("/:id", getPost);
 
 router.get("/timeline/:userId", getTimeLinePost);
+
+router.get("/profile/:username", getUserAllPosts);
 
 export default router;
