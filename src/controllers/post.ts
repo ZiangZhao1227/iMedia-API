@@ -68,8 +68,8 @@ export const toggleLikePost = async (req: any, res: Response) => {
     } else {
       await post.updateOne({ $pull: { likes: req.user.id } });
       res
-        .status(403)
-        .json({ success: false, message: "the post has been disliked" });
+        .status(200)
+        .json({ success: true, message: "the post has been disliked" });
     }
   } catch (error) {
     return res.status(500).json({ success: false, message: error });
