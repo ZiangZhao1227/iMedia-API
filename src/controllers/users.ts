@@ -124,3 +124,26 @@ export const unfollowUser = async (req: any, res: Response) => {
       .json({ success: false, message: "you can not follow yourself" });
   }
 };
+
+export const getFriends = async (req: any, res: Response) => {
+  try {
+    const user = await User.findById(req.params.userId);
+    const friends = await Promise.all(
+      user.followings.map((friendId: string) => {
+        return User.findById(friendId);
+      })
+    );
+    let friendList: any = [];
+    friends.map((friend: any) => {
+      const { _id, username, profilePicture } = friend;
+      friendList.push({ _id, username, profilePicture });
+    });
+    res.status(200).json({
+      success: true,
+      message: "get all friends successed",
+      friendList: friendList,
+    });
+  } catch (error) {
+    return res.status(500).json({ success: false, message: error });
+  }
+};
