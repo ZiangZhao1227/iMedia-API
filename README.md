@@ -1,6 +1,5 @@
 # iMedia-API
-A social media REST API with jwt login, register, and all CRUD operations
-
+A social media REST API with jwt login, register, and all CRUD operations. This server is deployed on heroku. Check the routers below to fetch the data. Note that some routes are protected by jwt middleware so in order to get the data please make sure you have the valid token to access.
 
 ## Tech & libraries
 
