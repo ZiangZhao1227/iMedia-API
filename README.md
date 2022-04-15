@@ -17,6 +17,8 @@ A social media REST API with jwt login, register, and all CRUD operations
 - bcrypt
 - helmet
 - dotenv
+- multer
+- cors
 
 ## Server is deployed on Heroku
 
@@ -25,7 +27,8 @@ A social media REST API with jwt login, register, and all CRUD operations
 
 ## URL Lists
 #### User
-* GET https://imedia-app.herokuapp.com/api/users/:id
+* GET https://imedia-app.herokuapp.com/api/users/
+* GET https://imedia-app.herokuapp.com/api/friends/:userId
 * PUT https://imedia-app.herokuapp.com/api/users/:id
 * DELETE https://imedia-app.herokuapp.com/api/users/:id
 * PUT https://imedia-app.herokuapp.com/api/users/:id/follow
@@ -33,7 +36,8 @@ A social media REST API with jwt login, register, and all CRUD operations
 
 #### POST
 * GET https://imedia-app.herokuapp.com/api/posts/:id
-* GET https://imedia-app.herokuapp.com/api/posts/timeline/all
+* GET https://imedia-app.herokuapp.com/api/posts/profile/:username
+* GET https://imedia-app.herokuapp.com/api/posts/timeline/:userId
 * PUT https://imedia-app.herokuapp.com/api/posts/:id/like
 * PUT https://imedia-app.herokuapp.com/api/posts/:id
 * DELETE https://imedia-app.herokuapp.com/api/posts/:id
@@ -42,6 +46,10 @@ A social media REST API with jwt login, register, and all CRUD operations
 #### Authentication
 * POST https://imedia-app.herokuapp.com/api/auth/login
 * POST https://imedia-app.herokuapp.com/api/auth/register
+
+
+#### Authentication
+* POST https://imedia-app.herokuapp.com/api/upload/
 
 ## Installing
 
