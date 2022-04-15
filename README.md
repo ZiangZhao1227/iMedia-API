@@ -24,6 +24,10 @@ A social media REST API with jwt login, register, and all CRUD operations. This 
 > BASE URL
 > https://imedia-app.herokuapp.com/
 
+## iMedia client side
+
+https://github.com/ZiangZhao1227/iMedia
+
 ## URL Lists
 #### User
 * GET https://imedia-app.herokuapp.com/api/users/
